@@ -1,0 +1,100 @@
+[
+  {
+    "case_id": "ADD-001",
+    "policy_start_date": "2026-08-25",
+    "claim_date": "2026-09-14",
+    "coverage_duration_months": 0,
+    "claim_type": "Hospitalization",
+    "treatment": "Treatment for acute infection",
+    "hospitalization_type": "inpatient",
+    "hospitalization_hours": 48,
+    "network_provider": true,
+    "documentation_available": [
+      "claim_form",
+      "discharge_summary",
+      "hospital_bill"
+    ],
+    "task": "Determine whether the hospitalization is admissible considering the initial waiting period."
+  },
+  {
+    "case_id": "ADD-002",
+    "policy_start_date": "2024-01-01",
+    "claim_date": "2026-09-14",
+    "coverage_duration_months": 32,
+    "claim_type": "Domiciliary Treatment",
+    "treatment": "Treatment for an illness requiring hospital-level care",
+    "hospitalization_type": "domiciliary",
+    "hospitalization_hours": null,
+    "network_provider": null,
+    "evidence_context": {
+      "hospital_room_unavailable": true,
+      "patient_cannot_be_moved": true
+    },
+    "sum_insured": 1000000,
+    "documentation_available": [
+      "claim_form",
+      "doctor_certificate",
+      "medical_records"
+    ],
+    "task": "Determine whether the domiciliary treatment is admissible and identify the applicable policy limit."
+  },
+  {
+    "case_id": "ADD-003",
+    "policy_start_date": "2024-01-01",
+    "claim_date": "2026-09-14",
+    "coverage_duration_months": 32,
+    "claim_type": "Hospitalization",
+    "treatment": "Appendectomy for acute appendicitis",
+    "hospitalization_type": "inpatient",
+    "hospitalization_hours": 72,
+    "network_provider": true,
+    "pre_hospitalization_days": 20,
+    "post_hospitalization_days": 45,
+    "same_condition_confirmed": true,
+    "documentation_available": [
+      "claim_form",
+      "discharge_summary",
+      "pre_hospitalization_bills",
+      "post_hospitalization_bills"
+    ],
+    "task": "Determine whether the hospitalization and the stated pre- and post-hospitalization expenses fall within the policy expense windows."
+  },
+  {
+    "case_id": "ADD-004",
+    "policy_start_date": "2024-01-01",
+    "claim_date": "2026-09-14",
+    "coverage_duration_months": 32,
+    "claim_type": "Hospitalization",
+    "treatment": "Treatment for acute infection",
+    "hospitalization_type": "inpatient",
+    "hospitalization_hours": 72,
+    "network_provider": false,
+    "evidence_context": {
+      "hospital_registered": null,
+      "hospital_minimum_criteria_documented": false
+    },
+    "documentation_available": [
+      "claim_form",
+      "discharge_summary"
+    ],
+    "task": "Determine whether the claim can be finally decided when the facility's compliance with the policy definition of Hospital is not established."
+  },
+  {
+    "case_id": "ADD-005",
+    "policy_start_date": "2024-01-01",
+    "claim_date": "2026-09-14",
+    "coverage_duration_months": 32,
+    "claim_type": "Hospitalization",
+    "treatment": "Cosmetic aesthetic surgery",
+    "hospitalization_type": "inpatient",
+    "hospitalization_hours": 48,
+    "network_provider": true,
+    "medical_necessity_confirmed": false,
+    "documentation_available": [
+      "claim_form",
+      "hospital_bill",
+      "discharge_summary"
+    ],
+    "task": "Determine whether the cosmetic procedure falls within the covered scope or an applicable exclusion."
+  }
+]

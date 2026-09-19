@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+streamlit
+requests
+pydantic
+python-dotenv
+google-genai
+pymupdf
+rank-bm25
+sentence-transformers
+torch
+numpy
+scikit-learn
+langgraph

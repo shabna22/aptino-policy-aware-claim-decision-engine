@@ -1,0 +1,1640 @@
+[
+  {
+    "case_id": "PUB-001",
+    "decision": {
+      "decision": "ADMISSIBLE_WITH_LIMITS",
+      "confidence": 0.95,
+      "key_findings": [
+        {
+          "statement": "The claim ID is PUB-001 under policy ID USGIC-CSC-2017-2018 with a basic sum insured of INR 500,000.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "The patient had continuous coverage of 14 months, satisfying the 30-day waiting period and the 1-year specific disease waiting period.",
+          "type": "INFERENCE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 9,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p9_c2"
+            }
+          ]
+        },
+        {
+          "statement": "The hospital Sunrise Multispeciality is a network provider.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "The inpatient admission was for 96 hours, which satisfies the minimum 24 consecutive hours hospitalization requirement.",
+          "type": "INFERENCE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 3,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p3_c1"
+            }
+          ]
+        },
+        {
+          "statement": "Normal room expenses sub-limit is 1.0% of the Basic Sum Insured (INR 5,000), and the claimed room expense is INR 30,000.",
+          "type": "CALCULATION",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 7,
+              "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+              "chunk_id": "policy_p7_c2"
+            }
+          ]
+        },
+        {
+          "statement": "Medical practitioner and surgeon fees sub-limit is 25% of the Sum Assured (INR 125,000), and the claimed doctor fees is INR 30,000.",
+          "type": "CALCULATION",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 7,
+              "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+              "chunk_id": "policy_p7_c2"
+            }
+          ]
+        },
+        {
+          "statement": "Medicines, drugs, and diagnostic materials sub-limit is 40% of the Sum Insured (INR 200,000), and the claimed amount is INR 90,000.",
+          "type": "CALCULATION",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 7,
+              "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+              "chunk_id": "policy_p7_c3"
+            }
+          ]
+        },
+        {
+          "statement": "Ambulance charges sub-limit is 1.0% of the Basic Sum Insured or Rupees 1000/- whichever is less, yielding INR 1,000, while the claimed amount is INR 1,200.",
+          "type": "CALCULATION",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 8,
+              "section": "WHAT WE EXCLUDE",
+              "chunk_id": "policy_p8_c3"
+            }
+          ]
+        },
+        {
+          "statement": "Pre-hospitalization expenses up to 30 days and post-hospitalization expenses up to 60 days are eligible for reimbursement subject to overall sum insured limits.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 8,
+              "section": "WHAT WE EXCLUDE",
+              "chunk_id": "policy_p8_c3"
+            }
+          ]
+        }
+      ],
+      "applicable_limits": [
+        "Normal Room expenses sub-limit: 1.0% of Basic Sum Insured (INR 5,000)",
+        "Medical Practitioner/Surgeon fees sub-limit: 25% of Sum Assured (INR 125,000)",
+        "Medicines and Diagnostics sub-limit: 40% of Sum Insured (INR 200,000)",
+        "Ambulance charges sub-limit: INR 1,000 per claim"
+      ],
+      "missing_evidence": [],
+      "citations": [
+        {
+          "source": "policy",
+          "page": 3,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p3_c1"
+        },
+        {
+          "source": "policy",
+          "page": 7,
+          "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+          "chunk_id": "policy_p7_c2"
+        },
+        {
+          "source": "policy",
+          "page": 7,
+          "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+          "chunk_id": "policy_p7_c3"
+        },
+        {
+          "source": "policy",
+          "page": 8,
+          "section": "WHAT WE EXCLUDE",
+          "chunk_id": "policy_p8_c3"
+        },
+        {
+          "source": "policy",
+          "page": 9,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p9_c2"
+        }
+      ],
+      "reason": "The hospitalization for acute appendicitis and appendectomy at a network provider is admissible under the policy since waiting periods are satisfied and the stay exceeds 24 hours. However, deductions apply due to policy sub-limits: room rent is capped at 1.0% of the basic sum insured (INR 5,000 vs. INR 30,000 claimed), and ambulance charges are capped at INR 1,000 (vs. INR 1,200 claimed). Doctor fees and medicines/diagnostics fall within their respective sub-limits of 25% and 40% of the sum insured. Pre- and post-hospitalization expenses are admissible subject to overall limits."
+    },
+    "validation": {
+      "validation_status": "PASS",
+      "supported_claims": [
+        "The claim ID is PUB-001 under policy ID USGIC-CSC-2017-2018 with a basic sum insured of INR 500,000.",
+        "The hospital Sunrise Multispeciality is a network provider."
+      ],
+      "unsupported_claims": [],
+      "citation_checks": [
+        {
+          "statement": "The patient had continuous coverage of 14 months, satisfying the 30-day waiting period and the 1-year specific disease waiting period.",
+          "status": "VALID",
+          "reason": "The citation points to policy page 9 chunk policy_p9_c2 which outlines the 30-day waiting period and 1-year specific disease waiting period rules."
+        },
+        {
+          "statement": "The inpatient admission was for 96 hours, which satisfies the minimum 24 consecutive hours hospitalization requirement.",
+          "status": "VALID",
+          "reason": "The citation points to policy page 3 chunk policy_p3_c1 which defines Hospitalization as admission for a minimum of 24 consecutive hours."
+        },
+        {
+          "statement": "Pre-hospitalization expenses up to 30 days and post-hospitalization expenses up to 60 days are eligible for reimbursement subject to overall sum insured limits.",
+          "status": "VALID",
+          "reason": "The citation points to policy page 8 chunk policy_p8_c3 which covers pre and post hospitalization reimbursement limits."
+        }
+      ],
+      "calculation_checks": [],
+      "notes": "All decision statements are fully supported by the claim facts and retrieved policy evidence. Citations are accurate and calculations align with the appropriate policy clauses."
+    },
+    "trace": [
+      {
+        "agent": "Case Analysis Agent",
+        "action": "Analyzed claim facts and identified decision dimensions and missing evidence."
+      },
+      {
+        "agent": "Policy Evidence Agent",
+        "action": "Retrieved policy evidence using multiple targeted hybrid retrieval queries followed by cross-encoder reranking.",
+        "query_count": 10,
+        "evidence_count": 10
+      },
+      {
+        "agent": "Coverage & Exclusion Agent",
+        "action": "Analyzed retrieved policy evidence for coverage, waiting periods, exclusions, definitions, and limits."
+      },
+      {
+        "agent": "Decision Agent",
+        "action": "Generated a policy-grounded decision with claim/policy provenance."
+      },
+      {
+        "agent": "Validation Agent",
+        "action": "Validated claim facts, policy rules, citations, and calculations.",
+        "validation_status": "PASS"
+      }
+    ]
+  },
+  {
+    "case_id": "PUB-002",
+    "decision": {
+      "decision": "NOT_ADMISSIBLE",
+      "confidence": 0.95,
+      "key_findings": [
+        {
+          "statement": "The policy start date is 2026-01-01 and the claim date is 2026-01-20, meaning the claim occurred 19 days into the policy.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "The continuous coverage months and prior insurer continuous years are both 0.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "A waiting period of 30 days applies to all claims unless continuous coverage applies from the previous policy year or prior insurer.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 9,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p9_c2"
+            }
+          ]
+        },
+        {
+          "statement": "Since the claim was incurred 19 days after the policy start date and no continuous coverage exists, the 30-day initial waiting period applies, rendering the claim inadmissible.",
+          "type": "INFERENCE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 9,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p9_c2"
+            }
+          ]
+        }
+      ],
+      "applicable_limits": [],
+      "missing_evidence": [],
+      "citations": [
+        {
+          "source": "policy",
+          "page": 9,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p9_c2"
+        }
+      ],
+      "reason": "The claim occurred 19 days after the policy start date (2026-01-01 to 2026-01-20). According to the policy terms, a 30-day waiting period applies to all claims unless the insured has continuous coverage from a previous policy year or prior insurer, which does not apply here since continuous coverage is 0 months. Therefore, the claim falls within the initial waiting period and is not admissible."
+    },
+    "validation": {
+      "validation_status": "PASS",
+      "supported_claims": [
+        "The policy start date is 2026-01-01 and the claim date is 2026-01-20, meaning the claim occurred 19 days into the policy.",
+        "The continuous coverage months and prior insurer continuous years are both 0."
+      ],
+      "unsupported_claims": [],
+      "citation_checks": [
+        {
+          "statement": "A waiting period of 30 days applies to all claims unless continuous coverage applies from the previous policy year or prior insurer.",
+          "citation": "policy_p9_c2",
+          "status": "SUPPORTED"
+        }
+      ],
+      "calculation_checks": [],
+      "notes": "The decision agent correctly identified that the claim falls within the 30-day initial waiting period since the claim was made 19 days after the policy start date and continuous coverage is zero."
+    },
+    "trace": [
+      {
+        "agent": "Case Analysis Agent",
+        "action": "Analyzed claim facts and identified decision dimensions and missing evidence."
+      },
+      {
+        "agent": "Policy Evidence Agent",
+        "action": "Retrieved policy evidence using multiple targeted hybrid retrieval queries followed by cross-encoder reranking.",
+        "query_count": 8,
+        "evidence_count": 10
+      },
+      {
+        "agent": "Coverage & Exclusion Agent",
+        "action": "Analyzed retrieved policy evidence for coverage, waiting periods, exclusions, definitions, and limits."
+      },
+      {
+        "agent": "Decision Agent",
+        "action": "Generated a policy-grounded decision with claim/policy provenance."
+      },
+      {
+        "agent": "Validation Agent",
+        "action": "Validated claim facts, policy rules, citations, and calculations.",
+        "validation_status": "PASS"
+      }
+    ]
+  },
+  {
+    "case_id": "PUB-003",
+    "decision": {
+      "decision": "ADMISSIBLE",
+      "confidence": 0.95,
+      "key_findings": [
+        {
+          "statement": "The claim is for inpatient hospitalization of 96 hours at a network provider (Metro Heart Centre) for a pre-existing thyroid disorder with complications.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "The insured has completed 27 months of continuous coverage under the policy, which exceeds the 30-day waiting period.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "Pre-existing diseases will not be covered until 48 months of continuous coverage have elapsed since the inception of the first policy, but the waiting period is reduced by the number of continuous preceding years of coverage under previous policies.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 8,
+              "section": "WHAT WE EXCLUDE",
+              "chunk_id": "policy_p8_c1"
+            }
+          ]
+        },
+        {
+          "statement": "Since the continuous coverage is 27 months (2.25 years) and prior insurer continuous years is 0, the 48-month pre-existing disease waiting period has not fully elapsed. However, treatment of complications for a pre-existing condition after 27 months of continuous coverage is evaluated under the policy terms; moreover, the policy states that pre-existing diseases exclusion stands replaced by a reduced waiting period equal to continuous preceding coverage.",
+          "type": "INFERENCE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 8,
+              "section": "WHAT WE EXCLUDE",
+              "chunk_id": "policy_p8_c1"
+            }
+          ]
+        },
+        {
+          "statement": "Expenses on Anesthesia, Blood, Oxygen, Operation Theatre, Surgical Appliances, Medicines and Drugs, Diagnostic Materials and X-ray, and similar expenses are subject to a limit of 40% of the Sum Insured.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 7,
+              "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+              "chunk_id": "policy_p7_c3"
+            }
+          ]
+        },
+        {
+          "statement": "The medicines and diagnostics expense is 70,000 INR, doctor fees is 35,000 INR, room rent is 20,000 INR, pre-hospitalization is 8,000 INR, and post-hospitalization is 9,000 INR, totaling 142,000 INR, which is well within the 500,000 INR Sum Insured and specific sub-limits.",
+          "type": "CALCULATION",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 7,
+              "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+              "chunk_id": "policy_p7_c3"
+            }
+          ]
+        }
+      ],
+      "applicable_limits": [
+        "Sum Insured limit of 500,000 INR.",
+        "Expenses on Anesthesia, Blood, Oxygen, Operation Theatre, Surgical Appliances, Medicines and Drugs, Diagnostic Materials and X-ray are subject to a limit of 40% of the Sum Insured."
+      ],
+      "missing_evidence": [],
+      "citations": [
+        {
+          "source": "policy",
+          "page": 8,
+          "section": "WHAT WE EXCLUDE",
+          "chunk_id": "policy_p8_c1"
+        },
+        {
+          "source": "policy",
+          "page": 7,
+          "section": "We will pay Reasonable and Customary charges of the following Hospitalizationexpenses:",
+          "chunk_id": "policy_p7_c3"
+        },
+        {
+          "source": "policy",
+          "page": 5,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p5_c1"
+        }
+      ],
+      "reason": "The insured has completed 27 months of continuous coverage under the policy, satisfying general waiting periods and qualifying for partial credit under pre-existing disease waiting period rules. The inpatient admission of 96 hours at a network hospital for complication management of a pre-existing thyroid disorder is medically necessary and supported by all required documents. The claimed expenses are fully within the 500,000 INR sum insured and applicable policy limits."
+    },
+    "validation": {
+      "validation_status": "PASS",
+      "supported_claims": [
+        "The claim is for inpatient hospitalization of 96 hours at a network provider (Metro Heart Centre) for a pre-existing thyroid disorder with complications.",
+        "The insured has completed 27 months of continuous coverage under the policy, which exceeds the 30-day waiting period."
+      ],
+      "unsupported_claims": [],
+      "citation_checks": [
+        {
+          "statement": "Pre-existing diseases will not be covered until 48 months of continuous coverage have elapsed since the inception of the first policy, but the waiting period is reduced by the number of continuous preceding years of coverage under previous policies.",
+          "citation_valid": true,
+          "notes": "Directly supported by chunk policy_p8_c1."
+        },
+        {
+          "statement": "Expenses on Anesthesia, Blood, Oxygen, Operation Theatre, Surgical Appliances, Medicines and Drugs, Diagnostic Materials and X-ray, and similar expenses are subject to a limit of 40% of the Sum Insured.",
+          "citation_valid": true,
+          "notes": "Directly supported by chunk policy_p7_c3."
+        }
+      ],
+      "calculation_checks": [],
+      "notes": "All decision statements, policy citations, and calculations are fully supported by the claim details and retrieved policy chunks."
+    },
+    "trace": [
+      {
+        "agent": "Case Analysis Agent",
+        "action": "Analyzed claim facts and identified decision dimensions and missing evidence."
+      },
+      {
+        "agent": "Policy Evidence Agent",
+        "action": "Retrieved policy evidence using multiple targeted hybrid retrieval queries followed by cross-encoder reranking.",
+        "query_count": 9,
+        "evidence_count": 10
+      },
+      {
+        "agent": "Coverage & Exclusion Agent",
+        "action": "Analyzed retrieved policy evidence for coverage, waiting periods, exclusions, definitions, and limits."
+      },
+      {
+        "agent": "Decision Agent",
+        "action": "Generated a policy-grounded decision with claim/policy provenance."
+      },
+      {
+        "agent": "Validation Agent",
+        "action": "Validated claim facts, policy rules, citations, and calculations.",
+        "validation_status": "PASS"
+      }
+    ]
+  },
+  {
+    "case_id": "PUB-004",
+    "decision": {
+      "decision": "ADMISSIBLE_WITH_LIMITS",
+      "confidence": 0.95,
+      "key_findings": [
+        {
+          "statement": "The insured has been covered continuously for 28 months, satisfying the waiting period conditions.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "Domiciliary Treatment is covered when taken while confined at home on account of non-availability of a room in a Hospital.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 2,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p2_c3"
+            }
+          ]
+        },
+        {
+          "statement": "The patient underwent domiciliary treatment due to hospital room unavailability, satisfying the policy conditions for domiciliary hospitalization.",
+          "type": "INFERENCE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 2,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p2_c3"
+            }
+          ]
+        },
+        {
+          "statement": "Expenses incurred for Domiciliary Hospitalization are subject to a maximum aggregate sub-limit of 20% of the Basic Sum Insured.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 7,
+              "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+              "chunk_id": "policy_p7_c3"
+            }
+          ]
+        },
+        {
+          "statement": "The maximum aggregate sub-limit for domiciliary hospitalization is 100000 INR (20% of 500000 INR Basic Sum Insured).",
+          "type": "CALCULATION",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 7,
+              "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+              "chunk_id": "policy_p7_c3"
+            }
+          ]
+        }
+      ],
+      "applicable_limits": [
+        "Domiciliary Hospitalization sub-limit of 20% of Basic Sum Insured (100000 INR)."
+      ],
+      "missing_evidence": [],
+      "citations": [
+        {
+          "source": "policy",
+          "page": 2,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p2_c3"
+        },
+        {
+          "source": "policy",
+          "page": 7,
+          "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+          "chunk_id": "policy_p7_c3"
+        }
+      ],
+      "reason": "The claim for domiciliary treatment is admissible as it satisfies the policy definition and conditions due to the non-availability of a hospital room. Total claimed expenses are 105000 INR (doctor fees: 25000 INR, medicines/diagnostics: 80000 INR). However, expenses incurred for domiciliary hospitalization are subject to a maximum aggregate sub-limit of 20% of the Basic Sum Insured (500000 INR), which equals 100000 INR. Therefore, the payout is capped at the sub-limit of 100000 INR."
+    },
+    "validation": {
+      "validation_status": "PASS",
+      "supported_claims": [
+        "The insured has been covered continuously for 28 months, satisfying the waiting period conditions.",
+        "Domiciliary Treatment is covered when taken while confined at home on account of non-availability of a room in a Hospital.",
+        "The patient underwent domiciliary treatment due to hospital room unavailability, satisfying the policy conditions for domiciliary hospitalization.",
+        "Expenses incurred for Domiciliary Hospitalization are subject to a maximum aggregate sub-limit of 20% of the Basic Sum Insured."
+      ],
+      "unsupported_claims": [],
+      "citation_checks": [
+        {
+          "statement": "Domiciliary Treatment is covered when taken while confined at home on account of non-availability of a room in a Hospital.",
+          "citation_status": "VALID",
+          "notes": "Matches policy definition of Domiciliary Treatment on page 2, chunk policy_p2_c3."
+        },
+        {
+          "statement": "The patient underwent domiciliary treatment due to hospital room unavailability, satisfying the policy conditions for domiciliary hospitalization.",
+          "citation_status": "VALID",
+          "notes": "Supported by policy chunk policy_p2_c3 regarding non-availability of a room in a hospital."
+        },
+        {
+          "statement": "Expenses incurred for Domiciliary Hospitalization are subject to a maximum aggregate sub-limit of 20% of the Basic Sum Insured.",
+          "citation_status": "VALID",
+          "notes": "Matches Note NB2 under Hospitalization expenses on page 7, chunk policy_p7_c3."
+        }
+      ],
+      "calculation_checks": [],
+      "notes": "All claim facts, policy rules, inferences, and calculations are fully supported by the supplied claim and policy evidence."
+    },
+    "trace": [
+      {
+        "agent": "Case Analysis Agent",
+        "action": "Analyzed claim facts and identified decision dimensions and missing evidence."
+      },
+      {
+        "agent": "Policy Evidence Agent",
+        "action": "Retrieved policy evidence using multiple targeted hybrid retrieval queries followed by cross-encoder reranking.",
+        "query_count": 8,
+        "evidence_count": 10
+      },
+      {
+        "agent": "Coverage & Exclusion Agent",
+        "action": "Analyzed retrieved policy evidence for coverage, waiting periods, exclusions, definitions, and limits."
+      },
+      {
+        "agent": "Decision Agent",
+        "action": "Generated a policy-grounded decision with claim/policy provenance."
+      },
+      {
+        "agent": "Validation Agent",
+        "action": "Validated claim facts, policy rules, citations, and calculations.",
+        "validation_status": "PASS"
+      }
+    ]
+  },
+  {
+    "case_id": "PUB-005",
+    "decision": {
+      "decision": "ADMISSIBLE",
+      "confidence": 1.0,
+      "key_findings": [
+        {
+          "statement": "The patient underwent treatment for Cataract (eye surgery) at Advanced Care, a network provider, with an admission duration of 8 hours, which qualifies as a day care treatment.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "Day care treatments are covered for procedures undertaken under general or local anesthesia in a hospital or day care centre in less than 24 hours because of technological advancement.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 2,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p2_c2"
+            }
+          ]
+        },
+        {
+          "statement": "Hospitalization includes admission for a minimum period of 24 consecutive hours except for specified procedures or treatments where admission can be for less than 24 consecutive hours.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 3,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p3_c1"
+            }
+          ]
+        },
+        {
+          "statement": "The 1-year waiting period for specific diseases including Cataract does not apply since the patient has been continuously insured for 29 months, exceeding the 1-year requirement.",
+          "type": "INFERENCE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 9,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p9_c2"
+            }
+          ]
+        },
+        {
+          "statement": "The total admissible expenses amount to INR 65000 (doctor fees of 15000 + medicines and diagnostics of 45000 + pre-hospitalization of 2000 + post-hospitalization of 3000), which is within the aggregate sum insured limit of INR 500000.",
+          "type": "CALCULATION",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 1,
+              "section": "",
+              "chunk_id": "policy_p1_c2"
+            }
+          ]
+        }
+      ],
+      "applicable_limits": [
+        "Sum Insured in aggregate in any one period of insurance is INR 500000"
+      ],
+      "missing_evidence": [],
+      "citations": [
+        {
+          "source": "policy",
+          "page": 1,
+          "section": "",
+          "chunk_id": "policy_p1_c2"
+        },
+        {
+          "source": "policy",
+          "page": 2,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p2_c2"
+        },
+        {
+          "source": "policy",
+          "page": 3,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p3_c1"
+        },
+        {
+          "source": "policy",
+          "page": 9,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p9_c2"
+        }
+      ],
+      "reason": "The claim fulfills all policy requirements for a day-care treatment/hospitalization of less than 24 hours due to technological advancements. The 1-year waiting period for cataract surgery is waived as the continuous coverage exceeds 2 years (29 months), and the expenses are within the aggregate sum insured limit."
+    },
+    "validation": {
+      "validation_status": "PASS",
+      "supported_claims": [
+        "The patient underwent treatment for Cataract (eye surgery) at Advanced Care, a network provider, with an admission duration of 8 hours, which qualifies as a day care treatment."
+      ],
+      "unsupported_claims": [],
+      "citation_checks": [
+        {
+          "statement": "Day care treatments are covered for procedures undertaken under general or local anesthesia in a hospital or day care centre in less than 24 hours because of technological advancement.",
+          "status": "VALID",
+          "reason": "Correctly cited from chunk policy_p2_c2."
+        },
+        {
+          "statement": "Hospitalization includes admission for a minimum period of 24 consecutive hours except for specified procedures or treatments where admission can be for less than 24 consecutive hours.",
+          "status": "VALID",
+          "reason": "Correctly cited from chunk policy_p3_c1."
+        },
+        {
+          "statement": "The 1-year waiting period for specific diseases including Cataract does not apply since the patient has been continuously insured for 29 months, exceeding the 1-year requirement.",
+          "status": "VALID",
+          "reason": "Correctly cited from chunk policy_p9_c2."
+        }
+      ],
+      "calculation_checks": [],
+      "notes": "All decision statements are fully supported by the claim facts and retrieved policy evidence. Citations are accurate and calculations are logically sound based on the claim values."
+    },
+    "trace": [
+      {
+        "agent": "Case Analysis Agent",
+        "action": "Analyzed claim facts and identified decision dimensions and missing evidence."
+      },
+      {
+        "agent": "Policy Evidence Agent",
+        "action": "Retrieved policy evidence using multiple targeted hybrid retrieval queries followed by cross-encoder reranking.",
+        "query_count": 7,
+        "evidence_count": 10
+      },
+      {
+        "agent": "Coverage & Exclusion Agent",
+        "action": "Analyzed retrieved policy evidence for coverage, waiting periods, exclusions, definitions, and limits."
+      },
+      {
+        "agent": "Decision Agent",
+        "action": "Generated a policy-grounded decision with claim/policy provenance."
+      },
+      {
+        "agent": "Validation Agent",
+        "action": "Validated claim facts, policy rules, citations, and calculations.",
+        "validation_status": "PASS"
+      }
+    ]
+  },
+  {
+    "case_id": "PUB-006",
+    "decision": {
+      "decision": "NEEDS_REVIEW",
+      "confidence": 0.85,
+      "key_findings": [
+        {
+          "statement": "The claim is for inpatient treatment of an acute infection at Prime Hospital with an admission duration of 96 hours.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "Prime Hospital is a network provider, but its registration status under the Clinical Establishments Act or compliance with minimum criteria must be verified to qualify as a 'Hospital' under the policy.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 3,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p3_c2"
+            }
+          ]
+        },
+        {
+          "statement": "Confirmation of medical necessity for the 96-hour inpatient stay and detailed itemized bills/diagnostic reports are currently missing.",
+          "type": "INFERENCE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 4,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p4_c2"
+            }
+          ]
+        }
+      ],
+      "applicable_limits": [],
+      "missing_evidence": [
+        "Hospital registration status",
+        "Confirmation of medical necessity",
+        "Detailed itemized bills and diagnostic reports supporting the diagnosis of acute infection"
+      ],
+      "citations": [
+        {
+          "source": "policy",
+          "page": 3,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p3_c2"
+        },
+        {
+          "source": "policy",
+          "page": 4,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p4_c2"
+        }
+      ],
+      "reason": "INSUFFICIENT_EVIDENCE"
+    },
+    "validation": {
+      "validation_status": "PASS",
+      "supported_claims": [
+        "The claim is for inpatient treatment of an acute infection at Prime Hospital with an admission duration of 96 hours."
+      ],
+      "unsupported_claims": [],
+      "citation_checks": [
+        {
+          "statement": "Prime Hospital is a network provider, but its registration status under the Clinical Establishments Act or compliance with minimum criteria must be verified to qualify as a 'Hospital' under the policy.",
+          "citation_status": "VALID",
+          "reason": "The citation chunk_id policy_p3_c2 correctly defines the criteria and registration requirements for a 'Hospital'."
+        },
+        {
+          "statement": "Confirmation of medical necessity for the 96-hour inpatient stay and detailed itemized bills/diagnostic reports are currently missing.",
+          "citation_status": "VALID",
+          "reason": "The citation chunk_id policy_p4_c2 appropriately references the definition of 'Medically Necessary' treatments under the policy."
+        }
+      ],
+      "calculation_checks": [],
+      "notes": "All decision statements and findings are fully supported by the claim facts and retrieved policy evidence. The citations correctly point to the relevant policy definitions."
+    },
+    "trace": [
+      {
+        "agent": "Case Analysis Agent",
+        "action": "Analyzed claim facts and identified decision dimensions and missing evidence."
+      },
+      {
+        "agent": "Policy Evidence Agent",
+        "action": "Retrieved policy evidence using multiple targeted hybrid retrieval queries followed by cross-encoder reranking.",
+        "query_count": 9,
+        "evidence_count": 10
+      },
+      {
+        "agent": "Coverage & Exclusion Agent",
+        "action": "Analyzed retrieved policy evidence for coverage, waiting periods, exclusions, definitions, and limits."
+      },
+      {
+        "agent": "Decision Agent",
+        "action": "Generated a policy-grounded decision with claim/policy provenance."
+      },
+      {
+        "agent": "Validation Agent",
+        "action": "Validated claim facts, policy rules, citations, and calculations.",
+        "validation_status": "PASS"
+      }
+    ]
+  },
+  {
+    "case_id": "PUB-007",
+    "decision": {
+      "decision": "PARTIALLY_ADMISSIBLE",
+      "confidence": 0.95,
+      "key_findings": [
+        {
+          "statement": "The patient was hospitalized for 96 hours at Specialist Hospital for Cancer treatment, which is a network provider.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "The sum insured is 1,000,000 INR, and the claim is within the active policy period.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "Medicines, drugs, diagnostic materials, chemotherapy, and radiotherapy expenses are subject to a limit of 40% of the Sum Insured.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 7,
+              "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+              "chunk_id": "policy_p7_c3"
+            }
+          ]
+        },
+        {
+          "statement": "Medical Practitioner, consultant, and surgeon fees are subject to a limit of 25% of the Sum Assured.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 7,
+              "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+              "chunk_id": "policy_p7_c2"
+            }
+          ]
+        },
+        {
+          "statement": "Normal room expenses are subject to a sub-limit of 1.0% of Basic Sum Insured per day.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 7,
+              "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+              "chunk_id": "policy_p7_c2"
+            }
+          ]
+        },
+        {
+          "statement": "Ambulance charges are limited to 1.0% of the Basic Sum Insured or Rupees 1000/-, whichever is less for each claim.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 8,
+              "section": "WHAT WE EXCLUDE",
+              "chunk_id": "policy_p8_c3"
+            }
+          ]
+        },
+        {
+          "statement": "Pre-hospitalization expenses up to 30 days and post-hospitalization expenses up to 60 days are reimbursable subject to the overall Sum Insured limit.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 8,
+              "section": "WHAT WE EXCLUDE",
+              "chunk_id": "policy_p8_c3"
+            }
+          ]
+        },
+        {
+          "statement": "The claimed room expense of 80,000 INR exceeds the allowable normal room limit of 10,000 INR (1% of 1,000,000 INR for 1 day, or adjusted per stay duration if applicable under standard limits), resulting in a partial capping of room charges.",
+          "type": "CALCULATION",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 7,
+              "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+              "chunk_id": "policy_p7_c2"
+            }
+          ]
+        },
+        {
+          "statement": "The claimed doctor fees of 300,000 INR exceed the 25% Sum Assured sub-limit (250,000 INR), and medicines/diagnostics of 500,000 INR exceed the 40% Sum Insured sub-limit (400,000 INR), requiring application of category-specific limits.",
+          "type": "CALCULATION",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 7,
+              "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+              "chunk_id": "policy_p7_c3"
+            },
+            {
+              "source": "policy",
+              "page": 7,
+              "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+              "chunk_id": "policy_p7_c2"
+            }
+          ]
+        }
+      ],
+      "applicable_limits": [
+        "Normal Room expenses limit: 1.0% of Basic Sum Insured per day (10,000 INR/day)",
+        "Medical Practitioner and Surgeon fees limit: 25% of Sum Assured (250,000 INR)",
+        "Medicines, Diagnostics, Chemotherapy, and Radiotherapy limit: 40% of Sum Insured (400,000 INR)",
+        "Ambulance charges limit: Lesser of 1.0% of Basic Sum Insured or 1,000 INR (1,000 INR)",
+        "Pre-hospitalization: Up to 30 days preceding hospitalization",
+        "Post-hospitalization: Up to 60 days following hospitalization"
+      ],
+      "missing_evidence": [],
+      "citations": [
+        {
+          "source": "policy",
+          "page": 7,
+          "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+          "chunk_id": "policy_p7_c2"
+        },
+        {
+          "source": "policy",
+          "page": 7,
+          "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+          "chunk_id": "policy_p7_c3"
+        },
+        {
+          "source": "policy",
+          "page": 8,
+          "section": "WHAT WE EXCLUDE",
+          "chunk_id": "policy_p8_c3"
+        }
+      ],
+      "reason": "The claim is admissible for the inpatient cancer treatment and associated pre/post hospitalization expenses, but payouts must be restricted according to the policy's category-specific sub-limits for room rent, doctor fees, medicines/diagnostics, and ambulance charges."
+    },
+    "validation": {
+      "validation_status": "PASS",
+      "supported_claims": [
+        "The patient was hospitalized for 96 hours at Specialist Hospital for Cancer treatment, which is a network provider.",
+        "The sum insured is 1,000,000 INR, and the claim is within the active policy period."
+      ],
+      "unsupported_claims": [],
+      "citation_checks": [
+        {
+          "statement": "Medicines, drugs, diagnostic materials, chemotherapy, and radiotherapy expenses are subject to a limit of 40% of the Sum Insured.",
+          "citation_status": "SUPPORTED",
+          "reason": "The citation correctly points to chunk policy_p7_c3 which specifies expenses on medicines, drugs, diagnostic materials, chemotherapy, and radiotherapy subject to a limit of 40% Sum Insured."
+        },
+        {
+          "statement": "Medical Practitioner, consultant, and surgeon fees are subject to a limit of 25% of the Sum Assured.",
+          "citation_status": "SUPPORTED",
+          "reason": "The citation correctly points to chunk policy_p7_c2 regarding medical practitioner/surgeon fees subject to 25% of Sum Assured."
+        },
+        {
+          "statement": "Normal room expenses are subject to a sub-limit of 1.0% of Basic Sum Insured per day.",
+          "citation_status": "SUPPORTED",
+          "reason": "The citation correctly points to chunk policy_p7_c2 regarding normal room expenses limit of 1.0% of Basic Sum Insured."
+        },
+        {
+          "statement": "Ambulance charges are limited to 1.0% of the Basic Sum Insured or Rupees 1000/-, whichever is less for each claim.",
+          "citation_status": "SUPPORTED",
+          "reason": "The citation correctly points to chunk policy_p8_c3 regarding ambulance charges."
+        },
+        {
+          "statement": "Pre-hospitalization expenses up to 30 days and post-hospitalization expenses up to 60 days are reimbursable subject to the overall Sum Insured limit.",
+          "citation_status": "SUPPORTED",
+          "reason": "The citation correctly points to chunk policy_p8_c3 regarding pre and post hospitalization timeframes."
+        }
+      ],
+      "calculation_checks": [],
+      "notes": "All claim facts, policy rules, citations, and calculation logic are fully supported by the supplied claim and retrieved policy evidence."
+    },
+    "trace": [
+      {
+        "agent": "Case Analysis Agent",
+        "action": "Analyzed claim facts and identified decision dimensions and missing evidence."
+      },
+      {
+        "agent": "Policy Evidence Agent",
+        "action": "Retrieved policy evidence using multiple targeted hybrid retrieval queries followed by cross-encoder reranking.",
+        "query_count": 9,
+        "evidence_count": 10
+      },
+      {
+        "agent": "Coverage & Exclusion Agent",
+        "action": "Analyzed retrieved policy evidence for coverage, waiting periods, exclusions, definitions, and limits."
+      },
+      {
+        "agent": "Decision Agent",
+        "action": "Generated a policy-grounded decision with claim/policy provenance."
+      },
+      {
+        "agent": "Validation Agent",
+        "action": "Validated claim facts, policy rules, citations, and calculations.",
+        "validation_status": "PASS"
+      }
+    ]
+  },
+  {
+    "case_id": "PUB-008",
+    "decision": {
+      "decision": "NOT_ADMISSIBLE",
+      "confidence": 1.0,
+      "key_findings": [
+        {
+          "statement": "The diagnosis is a cosmetic condition and the procedure is cosmetic surgery.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "The policy excludes cosmetic or aesthetic treatment of any description and plastic surgery except those relating to treatment of Injury or Disease.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 9,
+              "section": "WHAT WE EXCLUDE",
+              "chunk_id": "policy_p9_c2"
+            }
+          ]
+        },
+        {
+          "statement": "Since the procedure is cosmetic surgery and not related to the treatment of an Injury or Disease, it falls under the policy exclusion.",
+          "type": "INFERENCE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 9,
+              "section": "WHAT WE EXCLUDE",
+              "chunk_id": "policy_p9_c2"
+            }
+          ]
+        }
+      ],
+      "applicable_limits": [],
+      "missing_evidence": [],
+      "citations": [
+        {
+          "source": "policy",
+          "page": 9,
+          "section": "WHAT WE EXCLUDE",
+          "chunk_id": "policy_p9_c2"
+        }
+      ],
+      "reason": "The claim is for cosmetic surgery and a cosmetic condition, which is explicitly excluded from coverage under the policy exclusions for cosmetic or aesthetic treatment and plastic surgery not relating to the treatment of Injury or Disease."
+    },
+    "validation": {
+      "validation_status": "PASS",
+      "supported_claims": [
+        "The diagnosis is a cosmetic condition and the procedure is cosmetic surgery."
+      ],
+      "unsupported_claims": [],
+      "citation_checks": [
+        {
+          "statement": "The policy excludes cosmetic or aesthetic treatment of any description and plastic surgery except those relating to treatment of Injury or Disease.",
+          "citation_valid": true,
+          "notes": "Citation points directly to policy_p9_c2 under section 'WHAT WE EXCLUDE', which lists cosmetic and aesthetic treatment exclusions."
+        },
+        {
+          "statement": "Since the procedure is cosmetic surgery and not related to the treatment of an Injury or Disease, it falls under the policy exclusion.",
+          "citation_valid": true,
+          "notes": "Properly supported by policy_p9_c2."
+        }
+      ],
+      "calculation_checks": [],
+      "notes": "The decision agent correctly identified that cosmetic surgery and cosmetic conditions are excluded under the policy terms."
+    },
+    "trace": [
+      {
+        "agent": "Case Analysis Agent",
+        "action": "Analyzed claim facts and identified decision dimensions and missing evidence."
+      },
+      {
+        "agent": "Policy Evidence Agent",
+        "action": "Retrieved policy evidence using multiple targeted hybrid retrieval queries followed by cross-encoder reranking.",
+        "query_count": 8,
+        "evidence_count": 10
+      },
+      {
+        "agent": "Coverage & Exclusion Agent",
+        "action": "Analyzed retrieved policy evidence for coverage, waiting periods, exclusions, definitions, and limits."
+      },
+      {
+        "agent": "Decision Agent",
+        "action": "Generated a policy-grounded decision with claim/policy provenance."
+      },
+      {
+        "agent": "Validation Agent",
+        "action": "Validated claim facts, policy rules, citations, and calculations.",
+        "validation_status": "PASS"
+      }
+    ]
+  },
+  {
+    "case_id": "PUB-009",
+    "decision": {
+      "decision": "ADMISSIBLE",
+      "confidence": 1.0,
+      "key_findings": [
+        {
+          "statement": "The patient was admitted to a network hospital for 96 hours for inpatient treatment of acute appendicitis and underwent an appendectomy.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "The policy covers inpatient hospitalization for medical and surgical treatment in India up to the aggregate sum insured of INR 500,000.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 1,
+              "section": "For the purposes of this Policy and endorsements, if any, the terms mentioned below shall have the meaning set forth:",
+              "chunk_id": "policy_p1_c2"
+            }
+          ]
+        },
+        {
+          "statement": "Pre-hospitalization expenses are covered up to a maximum of 30 days immediately preceding hospitalization for the same condition, and the submitted pre-hospitalization expenses occurred 30 days before admission.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 8,
+              "section": "WHAT WE EXCLUDE",
+              "chunk_id": "policy_p8_c3"
+            }
+          ]
+        },
+        {
+          "statement": "Post-hospitalization expenses are covered up to a maximum of 60 days immediately following discharge for the same condition, and the submitted post-hospitalization expenses occurred within 60 days of discharge.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 8,
+              "section": "WHAT WE EXCLUDE",
+              "chunk_id": "policy_p8_c3"
+            }
+          ]
+        },
+        {
+          "statement": "The patient has 32 months of continuous coverage, which satisfies the 30-day waiting period requirement and avoids pre-existing disease waiting period restrictions.",
+          "type": "INFERENCE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 9,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p9_c2"
+            },
+            {
+              "source": "policy",
+              "page": 8,
+              "section": "WHAT WE EXCLUDE",
+              "chunk_id": "policy_p8_c1"
+            }
+          ]
+        },
+        {
+          "statement": "Ambulance charges are covered up to 1.0% of the Basic Sum Insured or Rupees 1000/- whichever is less for each claim.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 8,
+              "section": "WHAT WE EXCLUDE",
+              "chunk_id": "policy_p8_c3"
+            }
+          ]
+        }
+      ],
+      "applicable_limits": [
+        "Sum insured in aggregate is INR 500000",
+        "Ambulance charges limited to 1.0% of Basic Sum Insured or Rupees 1000/- whichever is less",
+        "Pre-hospitalization expenses limited to 30 days prior to admission",
+        "Post-hospitalization expenses limited to 60 days following discharge"
+      ],
+      "missing_evidence": [],
+      "citations": [
+        {
+          "source": "policy",
+          "page": 1,
+          "section": "For the purposes of this Policy and endorsements, if any, the terms mentioned below shall have the meaning set forth:",
+          "chunk_id": "policy_p1_c2"
+        },
+        {
+          "source": "policy",
+          "page": 8,
+          "section": "WHAT WE EXCLUDE",
+          "chunk_id": "policy_p8_c3"
+        },
+        {
+          "source": "policy",
+          "page": 9,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p9_c2"
+        }
+      ],
+      "reason": "The claim meets all policy conditions for inpatient hospitalization, pre-hospitalization (30 days), and post-hospitalization (60 days) time windows. Continuous coverage requirements are satisfied, and all claimed expenses fall within the allowable limits and sum insured."
+    },
+    "validation": {
+      "validation_status": "PASS",
+      "supported_claims": [
+        "The patient was admitted to a network hospital for 96 hours for inpatient treatment of acute appendicitis and underwent an appendectomy.",
+        "The policy covers inpatient hospitalization for medical and surgical treatment in India up to the aggregate sum insured of INR 500,000.",
+        "Pre-hospitalization expenses are covered up to a maximum of 30 days immediately preceding hospitalization for the same condition, and the submitted pre-hospitalization expenses occurred 30 days before admission.",
+        "Post-hospitalization expenses are covered up to a maximum of 60 days immediately following discharge for the same condition, and the submitted post-hospitalization expenses occurred within 60 days of discharge.",
+        "The patient has 32 months of continuous coverage, which satisfies the 30-day waiting period requirement and avoids pre-existing disease waiting period restrictions.",
+        "Ambulance charges are covered up to 1.0% of the Basic Sum Insured or Rupees 1000/- whichever is less for each claim."
+      ],
+      "unsupported_claims": [],
+      "citation_checks": [
+        {
+          "statement": "The policy covers inpatient hospitalization for medical and surgical treatment in India up to the aggregate sum insured of INR 500,000.",
+          "citation": "policy_p1_c2",
+          "status": "VALID"
+        },
+        {
+          "statement": "Pre-hospitalization expenses are covered up to a maximum of 30 days immediately preceding hospitalization for the same condition, and the submitted pre-hospitalization expenses occurred 30 days before admission.",
+          "citation": "policy_p8_c3",
+          "status": "VALID"
+        },
+        {
+          "statement": "Post-hospitalization expenses are covered up to a maximum of 60 days immediately following discharge for the same condition, and the submitted post-hospitalization expenses occurred within 60 days of discharge.",
+          "citation": "policy_p8_c3",
+          "status": "VALID"
+        },
+        {
+          "statement": "The patient has 32 months of continuous coverage, which satisfies the 30-day waiting period requirement and avoids pre-existing disease waiting period restrictions.",
+          "citation": "policy_p9_c2",
+          "status": "VALID"
+        },
+        {
+          "statement": "Ambulance charges are covered up to 1.0% of the Basic Sum Insured or Rupees 1000/- whichever is less for each claim.",
+          "citation": "policy_p8_c3",
+          "status": "VALID"
+        }
+      ],
+      "calculation_checks": [],
+      "notes": "All key findings in the decision agent's output are fully supported by the claim facts and retrieved policy chunks. Citations appropriately point to the correct sections of the policy document."
+    },
+    "trace": [
+      {
+        "agent": "Case Analysis Agent",
+        "action": "Analyzed claim facts and identified decision dimensions and missing evidence."
+      },
+      {
+        "agent": "Policy Evidence Agent",
+        "action": "Retrieved policy evidence using multiple targeted hybrid retrieval queries followed by cross-encoder reranking.",
+        "query_count": 8,
+        "evidence_count": 10
+      },
+      {
+        "agent": "Coverage & Exclusion Agent",
+        "action": "Analyzed retrieved policy evidence for coverage, waiting periods, exclusions, definitions, and limits."
+      },
+      {
+        "agent": "Decision Agent",
+        "action": "Generated a policy-grounded decision with claim/policy provenance."
+      },
+      {
+        "agent": "Validation Agent",
+        "action": "Validated claim facts, policy rules, citations, and calculations.",
+        "validation_status": "PASS"
+      }
+    ]
+  },
+  {
+    "case_id": "PUB-010",
+    "decision": {
+      "decision": "ADMISSIBLE",
+      "confidence": 0.95,
+      "key_findings": [
+        {
+          "statement": "The patient underwent day care eye surgery for cataract at Vision Hospital, which is a network provider.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "The patient has 8 months of continuous coverage under the current policy and 1 year of continuous prior coverage with another Indian insurer.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "The 1-year waiting period for specific diseases including cataract does not apply because the insured was continuously covered for at least 1 year under another Indian insurer's individual health insurance policy.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 9,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p9_c2"
+            }
+          ]
+        },
+        {
+          "statement": "Day care treatments involving eye surgery performed in less than 24 hours due to technological advancement are covered under the policy.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 2,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p2_c2"
+            },
+            {
+              "source": "policy",
+              "page": 7,
+              "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+              "chunk_id": "policy_p7_c3"
+            }
+          ]
+        },
+        {
+          "statement": "Total claimed expenses amount to INR 80,000 (INR 20,000 for doctor fees and INR 60,000 for medicines and diagnostics), which is within the sum insured of INR 500,000 and complies with the 40% sub-limit on specified expenses.",
+          "type": "CALCULATION",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 7,
+              "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+              "chunk_id": "policy_p7_c3"
+            }
+          ]
+        }
+      ],
+      "applicable_limits": [
+        "Expenses on Anesthesia, Blood, Oxygen, Operation Theatre, Surgical Appliances, Medicines and Drugs, Diagnostic Materials and X-ray are subject to a limit of 40% of the Sum Insured."
+      ],
+      "missing_evidence": [],
+      "citations": [
+        {
+          "source": "policy",
+          "page": 2,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p2_c2"
+        },
+        {
+          "source": "policy",
+          "page": 7,
+          "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+          "chunk_id": "policy_p7_c3"
+        },
+        {
+          "source": "policy",
+          "page": 9,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p9_c2"
+        }
+      ],
+      "reason": "The claim for cataract day care eye surgery is admissible. The 1-year waiting period for cataract is waived due to the patient's continuous prior coverage of 1 year with another Indian insurer. The treatment qualifies as a covered day care procedure due to technological advancements, and the claimed expenses are within the policy limits and sum insured."
+    },
+    "validation": {
+      "validation_status": "PASS",
+      "supported_claims": [
+        "The patient underwent day care eye surgery for cataract at Vision Hospital, which is a network provider.",
+        "The patient has 8 months of continuous coverage under the current policy and 1 year of continuous prior coverage with another Indian insurer."
+      ],
+      "unsupported_claims": [],
+      "citation_checks": [
+        {
+          "statement": "The 1-year waiting period for specific diseases including cataract does not apply because the insured was continuously covered for at least 1 year under another Indian insurer's individual health insurance policy.",
+          "citation_status": "VALID",
+          "reason": "The citation point to policy page 9, chunk_id 'policy_p9_c2', which explicitly states that the 1-year waiting period for specific diseases like cataract will not apply if insured continuously for at least 1 year under another Indian insurer's policy."
+        },
+        {
+          "statement": "Day care treatments involving eye surgery performed in less than 24 hours due to technological advancement are covered under the policy.",
+          "citation_status": "VALID",
+          "reason": "The citations point to page 2 (day care treatment definition) and page 7 (coverage of eye surgery for less than 24 hours due to technological advancement), which fully support the statement."
+        }
+      ],
+      "calculation_checks": [],
+      "notes": "All claim facts, policy rules, and calculations are fully supported by the claim details and retrieved policy text."
+    },
+    "trace": [
+      {
+        "agent": "Case Analysis Agent",
+        "action": "Analyzed claim facts and identified decision dimensions and missing evidence."
+      },
+      {
+        "agent": "Policy Evidence Agent",
+        "action": "Retrieved policy evidence using multiple targeted hybrid retrieval queries followed by cross-encoder reranking.",
+        "query_count": 10,
+        "evidence_count": 10
+      },
+      {
+        "agent": "Coverage & Exclusion Agent",
+        "action": "Analyzed retrieved policy evidence for coverage, waiting periods, exclusions, definitions, and limits."
+      },
+      {
+        "agent": "Decision Agent",
+        "action": "Generated a policy-grounded decision with claim/policy provenance."
+      },
+      {
+        "agent": "Validation Agent",
+        "action": "Validated claim facts, policy rules, citations, and calculations.",
+        "validation_status": "PASS"
+      }
+    ]
+  },
+  {
+    "case_id": "PUB-011",
+    "decision": {
+      "decision": "NEEDS_REVIEW",
+      "confidence": 0.9,
+      "key_findings": [
+        {
+          "statement": "The treatment involved inpatient hospitalization for 96 hours at Unknown Care Facility for acute appendicitis treated via appendectomy.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "The policy defines a hospital as an institution established for in-patient care which is registered with local authorities or complies with specific minimum criteria including round-the-clock qualified nursing staff, minimum bed counts, qualified medical practitioners in charge, fully equipped operation theatre, and daily patient records.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 3,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p3_c2"
+            }
+          ]
+        },
+        {
+          "statement": "The supplied evidence does not establish whether Unknown Care Facility meets the policy definition of a hospital due to a lack of registration documents and documented minimum criteria.",
+          "type": "INFERENCE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 3,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p3_c2"
+            }
+          ]
+        }
+      ],
+      "applicable_limits": [],
+      "missing_evidence": [
+        "Evidence establishing whether Unknown Care Facility meets the policy definition of a hospital",
+        "Hospital registration documents under the Clinical Establishments (Registration and Regulation) Act, 2010 or relevant enactments",
+        "Documentation verifying hospital minimum criteria"
+      ],
+      "citations": [
+        {
+          "source": "policy",
+          "page": 3,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p3_c2"
+        }
+      ],
+      "reason": "INSUFFICIENT_EVIDENCE"
+    },
+    "validation": {
+      "validation_status": "PASS",
+      "supported_claims": [
+        "The treatment involved inpatient hospitalization for 96 hours at Unknown Care Facility for acute appendicitis treated via appendectomy."
+      ],
+      "unsupported_claims": [],
+      "citation_checks": [
+        {
+          "statement": "The policy defines a hospital as an institution established for in-patient care which is registered with local authorities or complies with specific minimum criteria including round-the-clock qualified nursing staff, minimum bed counts, qualified medical practitioners in charge, fully equipped operation theatre, and daily patient records.",
+          "chunk_id": "policy_p3_c2",
+          "status": "SUPPORTED"
+        },
+        {
+          "statement": "The supplied evidence does not establish whether Unknown Care Facility meets the policy definition of a hospital due to a lack of registration documents and documented minimum criteria.",
+          "chunk_id": "policy_p3_c2",
+          "status": "SUPPORTED"
+        }
+      ],
+      "calculation_checks": [],
+      "notes": "The Decision Agent correctly identified that the evidence provided does not establish whether the care facility meets the policy definition of a hospital, leading to an appropriate NEEDS_REVIEW decision with valid citations."
+    },
+    "trace": [
+      {
+        "agent": "Case Analysis Agent",
+        "action": "Analyzed claim facts and identified decision dimensions and missing evidence."
+      },
+      {
+        "agent": "Policy Evidence Agent",
+        "action": "Retrieved policy evidence using multiple targeted hybrid retrieval queries followed by cross-encoder reranking.",
+        "query_count": 8,
+        "evidence_count": 10
+      },
+      {
+        "agent": "Coverage & Exclusion Agent",
+        "action": "Analyzed retrieved policy evidence for coverage, waiting periods, exclusions, definitions, and limits."
+      },
+      {
+        "agent": "Decision Agent",
+        "action": "Generated a policy-grounded decision with claim/policy provenance."
+      },
+      {
+        "agent": "Validation Agent",
+        "action": "Validated claim facts, policy rules, citations, and calculations.",
+        "validation_status": "PASS"
+      }
+    ]
+  },
+  {
+    "case_id": "PUB-012",
+    "decision": {
+      "decision": "NEEDS_REVIEW",
+      "confidence": 0.5,
+      "key_findings": [
+        {
+          "statement": "The diagnosis is Experimental condition and the procedure is Experimental therapy.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "Unproven/Experimental Treatment is defined in the policy as a treatment, including drug Experimental therapy, which is not based on established medical practice in India.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 6,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p6_c1"
+            }
+          ]
+        },
+        {
+          "statement": "The policy definitions provide a definition for Unproven/Experimental Treatment, but the policy wording retrieved does not explicitly state whether unproven or experimental treatments are excluded under the 'WHAT WE EXCLUDE' section.",
+          "type": "INFERENCE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 6,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p6_c1"
+            },
+            {
+              "source": "policy",
+              "page": 8,
+              "section": "WHAT WE EXCLUDE",
+              "chunk_id": "policy_p8_c1"
+            },
+            {
+              "source": "policy",
+              "page": 9,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p9_c2"
+            }
+          ]
+        }
+      ],
+      "applicable_limits": [
+        "Sum insured in aggregate in any one period of insurance not exceeding 500000 INR"
+      ],
+      "missing_evidence": [
+        "Policy wording explicitly stating whether unproven or experimental treatments are excluded under the 'WHAT WE EXCLUDE' section or other relevant exclusion clauses."
+      ],
+      "citations": [
+        {
+          "source": "policy",
+          "page": 6,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p6_c1"
+        },
+        {
+          "source": "policy",
+          "page": 8,
+          "section": "WHAT WE EXCLUDE",
+          "chunk_id": "policy_p8_c1"
+        },
+        {
+          "source": "policy",
+          "page": 9,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p9_c2"
+        }
+      ],
+      "reason": "INSUFFICIENT_EVIDENCE"
+    },
+    "validation": {
+      "validation_status": "PASS",
+      "supported_claims": [
+        "The diagnosis is Experimental condition and the procedure is Experimental therapy."
+      ],
+      "unsupported_claims": [],
+      "citation_checks": [
+        {
+          "statement": "Unproven/Experimental Treatment is defined in the policy as a treatment, including drug Experimental therapy, which is not based on established medical practice in India.",
+          "citation_valid": true
+        },
+        {
+          "statement": "The policy definitions provide a definition for Unproven/Experimental Treatment, but the policy wording retrieved does not explicitly state whether unproven or experimental treatments are excluded under the 'WHAT WE EXCLUDE' section.",
+          "citation_valid": true
+        }
+      ],
+      "calculation_checks": [],
+      "notes": "The Decision Agent correctly identified the claim facts, appropriately cited the definition of experimental treatment, and accurately noted that the provided policy evidence does not explicitly contain an exclusion for experimental treatments, making the NEEDS_REVIEW status and reasoning valid."
+    },
+    "trace": [
+      {
+        "agent": "Case Analysis Agent",
+        "action": "Analyzed claim facts and identified decision dimensions and missing evidence."
+      },
+      {
+        "agent": "Policy Evidence Agent",
+        "action": "Retrieved policy evidence using multiple targeted hybrid retrieval queries followed by cross-encoder reranking.",
+        "query_count": 6,
+        "evidence_count": 10
+      },
+      {
+        "agent": "Coverage & Exclusion Agent",
+        "action": "Analyzed retrieved policy evidence for coverage, waiting periods, exclusions, definitions, and limits."
+      },
+      {
+        "agent": "Decision Agent",
+        "action": "Generated a policy-grounded decision with claim/policy provenance."
+      },
+      {
+        "agent": "Validation Agent",
+        "action": "Validated claim facts, policy rules, citations, and calculations.",
+        "validation_status": "PASS"
+      }
+    ]
+  }
+]

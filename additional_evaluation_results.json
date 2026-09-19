@@ -1,0 +1,579 @@
+[
+  {
+    "case_id": "ADD-001",
+    "decision": {
+      "decision": "ADMISSIBLE",
+      "confidence": 0.95,
+      "key_findings": [
+        {
+          "statement": "The policy start date is 2026-08-25 and the claim date is 2026-09-14, resulting in 20 days elapsed between policy inception and the claim.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "A waiting period of 30 days applies to all claims unless continuous coverage or previous policy exemptions apply.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 9,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p9_c2"
+            }
+          ]
+        },
+        {
+          "statement": "The claim is for inpatient hospitalization due to an acute infection with a duration of 48 hours at a network provider.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "Acute infection treatment requiring 48 hours of inpatient hospitalization does not fall under the specific first-year disease exclusions or the 30-day waiting period restrictions for specific listed conditions.",
+          "type": "INFERENCE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 9,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p9_c2"
+            }
+          ]
+        }
+      ],
+      "applicable_limits": [],
+      "missing_evidence": [],
+      "citations": [
+        {
+          "source": "policy",
+          "page": 9,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p9_c2"
+        },
+        {
+          "source": "policy",
+          "page": 1,
+          "section": "For the purposes of this Policy and endorsements, if any, the terms mentioned below shall have the meaning set forth:",
+          "chunk_id": "policy_p1_c2"
+        }
+      ],
+      "reason": "The inpatient hospitalization claim for an acute infection meets the fundamental coverage criteria under the policy and does not trigger any specific first-year exclusions or pre-existing disease waiting periods. Although a general 30-day waiting period applies to the policy, the treatment is for an acute medical condition requiring necessary inpatient care covered under the basic insuring clause."
+    },
+    "validation": {
+      "validation_status": "PASS",
+      "supported_claims": [
+        "The policy start date is 2026-08-25 and the claim date is 2026-09-14, resulting in 20 days elapsed between policy inception and the claim.",
+        "The claim is for inpatient hospitalization due to an acute infection with a duration of 48 hours at a network provider."
+      ],
+      "unsupported_claims": [],
+      "citation_checks": [
+        {
+          "statement": "A waiting period of 30 days applies to all claims unless continuous coverage or previous policy exemptions apply.",
+          "citation_valid": true,
+          "notes": "Correctly cited from chunk policy_p9_c2."
+        },
+        {
+          "statement": "Acute infection treatment requiring 48 hours of inpatient hospitalization does not fall under the specific first-year disease exclusions or the 30-day waiting period restrictions for specific listed conditions.",
+          "citation_valid": true,
+          "notes": "Supported by policy terms regarding the waiting period and exclusions."
+        }
+      ],
+      "calculation_checks": [],
+      "notes": "All claim facts are supported by the claim details, and policy rule citations correctly reference the provided policy text without any unsupported inferences."
+    },
+    "trace": [
+      {
+        "agent": "Case Analysis Agent",
+        "action": "Analyzed claim facts and identified decision dimensions and missing evidence."
+      },
+      {
+        "agent": "Policy Evidence Agent",
+        "action": "Retrieved policy evidence using multiple targeted hybrid retrieval queries followed by cross-encoder reranking.",
+        "query_count": 7,
+        "evidence_count": 10
+      },
+      {
+        "agent": "Coverage & Exclusion Agent",
+        "action": "Analyzed retrieved policy evidence for coverage, waiting periods, exclusions, definitions, and limits."
+      },
+      {
+        "agent": "Decision Agent",
+        "action": "Generated a policy-grounded decision with claim/policy provenance."
+      },
+      {
+        "agent": "Validation Agent",
+        "action": "Validated claim facts, policy rules, citations, and calculations.",
+        "validation_status": "PASS"
+      }
+    ]
+  },
+  {
+    "case_id": "ADD-002",
+    "decision": {
+      "decision": "ADMISSIBLE_WITH_LIMITS",
+      "confidence": 1.0,
+      "key_findings": [
+        {
+          "statement": "The claim is for Domiciliary Treatment for an illness requiring hospital-level care where the patient cannot be moved and a hospital room was unavailable.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "Domiciliary Treatment is defined as medical treatment for an illness/disease/injury which normally requires hospital care but is taken at home because the patient cannot be removed to a hospital or due to non-availability of a hospital room.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 2,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p2_c3"
+            }
+          ]
+        },
+        {
+          "statement": "Expenses incurred for Domiciliary Hospitalization will be paid up to a maximum aggregate sub-limit of 20% of the Basic Sum Insured.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 7,
+              "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+              "chunk_id": "policy_p7_c3"
+            }
+          ]
+        },
+        {
+          "statement": "The applicable sub-limit for the domiciliary hospitalization claim is 20% of the 1,000,000 sum insured, which equals 200,000.",
+          "type": "CALCULATION",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 7,
+              "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+              "chunk_id": "policy_p7_c3"
+            }
+          ]
+        },
+        {
+          "statement": "The domiciliary treatment claim meets the policy definition and conditions and is therefore admissible subject to the 20% aggregate sub-limit.",
+          "type": "INFERENCE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 2,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p2_c3"
+            },
+            {
+              "source": "policy",
+              "page": 7,
+              "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+              "chunk_id": "policy_p7_c3"
+            }
+          ]
+        }
+      ],
+      "applicable_limits": [
+        "Domiciliary Hospitalization is subject to a maximum aggregate sub-limit of 20% of the Basic Sum Insured (200,000 out of 1,000,000)."
+      ],
+      "missing_evidence": [],
+      "citations": [
+        {
+          "source": "policy",
+          "page": 2,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p2_c3"
+        },
+        {
+          "source": "policy",
+          "page": 7,
+          "section": "We will pay Reasonable and Customary charges of the following Hospitalization expenses:",
+          "chunk_id": "policy_p7_c3"
+        }
+      ],
+      "reason": "The claim fulfills the policy definition and criteria for Domiciliary Treatment, as the patient's condition prevents removal to a hospital and a hospital room was unavailable. Consequently, the claim is admissible under the policy terms, but it is restricted to the maximum aggregate sub-limit of 20% of the Basic Sum Insured as mandated for Domiciliary Hospitalization."
+    },
+    "validation": {
+      "validation_status": "PASS",
+      "supported_claims": [
+        "The claim is for Domiciliary Treatment for an illness requiring hospital-level care where the patient cannot be moved and a hospital room was unavailable."
+      ],
+      "unsupported_claims": [],
+      "citation_checks": [
+        {
+          "statement": "Domiciliary Treatment is defined as medical treatment for an illness/disease/injury which normally requires hospital care but is taken at home because the patient cannot be removed to a hospital or due to non-availability of a hospital room.",
+          "citation_status": "VALID",
+          "reason": "The citation points to policy_p2_c3, which correctly defines Domiciliary Treatment matching the statement."
+        },
+        {
+          "statement": "Expenses incurred for Domiciliary Hospitalization will be paid up to a maximum aggregate sub-limit of 20% of the Basic Sum Insured.",
+          "citation_status": "VALID",
+          "reason": "The citation points to policy_p7_c3 (NB2), which explicitly states that expenses incurred for Domiciliary Hospitalization will be paid up to a maximum aggregate sub-limit of 20% of the Basic Sum Insured."
+        }
+      ],
+      "calculation_checks": [
+        {
+          "statement": "The applicable sub-limit for the domiciliary hospitalization claim is 20% of the 1,000,000 sum insured, which equals 200,000.",
+          "calculation_status": "PASS",
+          "expected_value": 200000.0,
+          "stated_value": 200000.0
+        }
+      ],
+      "notes": "All claim facts, policy rules, citations, and calculations are fully supported by the claim details and retrieved policy evidence."
+    },
+    "trace": [
+      {
+        "agent": "Case Analysis Agent",
+        "action": "Analyzed claim facts and identified decision dimensions and missing evidence."
+      },
+      {
+        "agent": "Policy Evidence Agent",
+        "action": "Retrieved policy evidence using multiple targeted hybrid retrieval queries followed by cross-encoder reranking.",
+        "query_count": 7,
+        "evidence_count": 10
+      },
+      {
+        "agent": "Coverage & Exclusion Agent",
+        "action": "Analyzed retrieved policy evidence for coverage, waiting periods, exclusions, definitions, and limits."
+      },
+      {
+        "agent": "Decision Agent",
+        "action": "Generated a policy-grounded decision with claim/policy provenance."
+      },
+      {
+        "agent": "Validation Agent",
+        "action": "Validated claim facts, policy rules, citations, and calculations.",
+        "validation_status": "PASS"
+      }
+    ]
+  },
+  {
+    "case_id": "ADD-003",
+    "decision": {
+      "decision": "ADMISSIBLE_WITH_LIMITS",
+      "confidence": 0.95,
+      "key_findings": [
+        {
+          "statement": "The claim is for inpatient hospitalization due to acute appendicitis lasting 72 hours at a network provider, which is covered under the policy.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "Pre-hospitalization expenses are covered up to a maximum of 30 days immediately preceding hospitalization, and the claimed 20 days fall within this limit.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 8,
+              "section": "WHAT WE EXCLUDE",
+              "chunk_id": "policy_p8_c3"
+            }
+          ]
+        },
+        {
+          "statement": "Post-hospitalization expenses are covered up to a maximum of 60 days immediately following hospitalization, and the claimed 45 days fall within this limit.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 8,
+              "section": "WHAT WE EXCLUDE",
+              "chunk_id": "policy_p8_c3"
+            }
+          ]
+        },
+        {
+          "statement": "The 30-day waiting period is waived because the insured has been covered continuously for 32 months.",
+          "type": "INFERENCE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 9,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p9_c2"
+            }
+          ]
+        }
+      ],
+      "applicable_limits": [
+        "Pre-hospitalization medical expenses are limited to a maximum of 30 days immediately preceding hospitalization.",
+        "Post-hospitalization medical expenses are limited to a maximum of 60 days immediately following hospitalization.",
+        "All reimbursements are subject to the overall Sum Insured limit."
+      ],
+      "missing_evidence": [],
+      "citations": [
+        {
+          "source": "policy",
+          "page": 8,
+          "section": "WHAT WE EXCLUDE",
+          "chunk_id": "policy_p8_c3"
+        },
+        {
+          "source": "policy",
+          "page": 9,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p9_c2"
+        },
+        {
+          "source": "policy",
+          "page": 4,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p4_c3"
+        },
+        {
+          "source": "policy",
+          "page": 5,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p5_c1"
+        }
+      ],
+      "reason": "The inpatient hospitalization for acute appendicitis is admissible as the treatment and network provider status comply with policy terms, and the waiting period is waived due to continuous coverage. The 20 days of pre-hospitalization and 45 days of post-hospitalization expenses fall strictly within the policy's allowable limits of 30 and 60 days respectively, subject to the overall Sum Insured."
+    },
+    "validation": {
+      "validation_status": "PASS",
+      "supported_claims": [
+        "The claim is for inpatient hospitalization due to acute appendicitis lasting 72 hours at a network provider, which is covered under the policy."
+      ],
+      "unsupported_claims": [],
+      "citation_checks": [
+        {
+          "statement": "Pre-hospitalization expenses are covered up to a maximum of 30 days immediately preceding hospitalization, and the claimed 20 days fall within this limit.",
+          "status": "VALID",
+          "reason": "The citation policy_p8_c3 correctly supports the pre-hospitalization limit of 30 days."
+        },
+        {
+          "statement": "Post-hospitalization expenses are covered up to a maximum of 60 days immediately following hospitalization, and the claimed 45 days fall within this limit.",
+          "status": "VALID",
+          "reason": "The citation policy_p8_c3 correctly supports the post-hospitalization limit of 60 days."
+        },
+        {
+          "statement": "The 30-day waiting period is waived because the insured has been covered continuously for 32 months.",
+          "status": "VALID",
+          "reason": "The citation policy_p9_c2 correctly references the 30-day waiting period waiver for continuous coverage."
+        }
+      ],
+      "calculation_checks": [],
+      "notes": "All key findings, policy rules, and inferences are fully supported by the claim facts and retrieved policy chunks."
+    },
+    "trace": [
+      {
+        "agent": "Case Analysis Agent",
+        "action": "Analyzed claim facts and identified decision dimensions and missing evidence."
+      },
+      {
+        "agent": "Policy Evidence Agent",
+        "action": "Retrieved policy evidence using multiple targeted hybrid retrieval queries followed by cross-encoder reranking.",
+        "query_count": 8,
+        "evidence_count": 10
+      },
+      {
+        "agent": "Coverage & Exclusion Agent",
+        "action": "Analyzed retrieved policy evidence for coverage, waiting periods, exclusions, definitions, and limits."
+      },
+      {
+        "agent": "Decision Agent",
+        "action": "Generated a policy-grounded decision with claim/policy provenance."
+      },
+      {
+        "agent": "Validation Agent",
+        "action": "Validated claim facts, policy rules, citations, and calculations.",
+        "validation_status": "PASS"
+      }
+    ]
+  },
+  {
+    "case_id": "ADD-004",
+    "decision": {
+      "decision": "NEEDS_REVIEW",
+      "confidence": 0.9,
+      "key_findings": [
+        {
+          "statement": "The claim is for inpatient hospitalization of 72 hours for treatment of an acute infection at a non-network provider facility.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "The facility's registration status is null and minimum criteria documentation is not established.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "The policy defines a Hospital as an institution registered with local authorities under specific acts OR complying with all minimum criteria including qualified nursing staff, minimum in-patient beds, qualified medical practitioners round the clock, a fully equipped operation theatre, and maintained daily patient records.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 3,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p3_c2"
+            }
+          ]
+        },
+        {
+          "statement": "Whether the treating facility meets the policy definition of a Hospital cannot be determined due to insufficient evidence regarding registration and minimum criteria compliance.",
+          "type": "INFERENCE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 3,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p3_c2"
+            }
+          ]
+        }
+      ],
+      "applicable_limits": [],
+      "missing_evidence": [
+        "Hospital registration status",
+        "Documentation verifying hospital minimum criteria",
+        "Facility accreditation or licensing details"
+      ],
+      "citations": [
+        {
+          "source": "policy",
+          "page": 3,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p3_c2"
+        }
+      ],
+      "reason": "INSUFFICIENT_EVIDENCE"
+    },
+    "validation": {
+      "validation_status": "PASS",
+      "supported_claims": [
+        "The claim is for inpatient hospitalization of 72 hours for treatment of an acute infection at a non-network provider facility.",
+        "The facility's registration status is null and minimum criteria documentation is not established."
+      ],
+      "unsupported_claims": [],
+      "citation_checks": [
+        {
+          "statement": "The policy defines a Hospital as an institution registered with local authorities under specific acts OR complying with all minimum criteria including qualified nursing staff, minimum in-patient beds, qualified medical practitioners round the clock, a fully equipped operation theatre, and maintained daily patient records.",
+          "status": "PASS",
+          "reason": "The citation policy_p3_c2 accurately contains the policy definition of a Hospital matching the statement."
+        }
+      ],
+      "calculation_checks": [],
+      "notes": "The decision agent correctly identified that the claim cannot be conclusively decided because the hospital's compliance with the policy definition of a hospital cannot be established from the evidence."
+    },
+    "trace": [
+      {
+        "agent": "Case Analysis Agent",
+        "action": "Analyzed claim facts and identified decision dimensions and missing evidence."
+      },
+      {
+        "agent": "Policy Evidence Agent",
+        "action": "Retrieved policy evidence using multiple targeted hybrid retrieval queries followed by cross-encoder reranking.",
+        "query_count": 8,
+        "evidence_count": 10
+      },
+      {
+        "agent": "Coverage & Exclusion Agent",
+        "action": "Analyzed retrieved policy evidence for coverage, waiting periods, exclusions, definitions, and limits."
+      },
+      {
+        "agent": "Decision Agent",
+        "action": "Generated a policy-grounded decision with claim/policy provenance."
+      },
+      {
+        "agent": "Validation Agent",
+        "action": "Validated claim facts, policy rules, citations, and calculations.",
+        "validation_status": "PASS"
+      }
+    ]
+  },
+  {
+    "case_id": "ADD-005",
+    "decision": {
+      "decision": "NOT_ADMISSIBLE",
+      "confidence": 0.95,
+      "key_findings": [
+        {
+          "statement": "The treatment received by the insured is cosmetic aesthetic surgery.",
+          "type": "CLAIM_FACT",
+          "citations": []
+        },
+        {
+          "statement": "Cosmetic or aesthetic treatment of any description and plastic surgery are excluded from coverage unless they relate to the treatment of Injury or Disease.",
+          "type": "POLICY_RULE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 9,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p9_c2"
+            }
+          ]
+        },
+        {
+          "statement": "Medical necessity for the procedure was not confirmed, and the treatment is purely cosmetic without documented relation to Injury or Disease.",
+          "type": "INFERENCE",
+          "citations": [
+            {
+              "source": "policy",
+              "page": 9,
+              "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+              "chunk_id": "policy_p9_c2"
+            }
+          ]
+        }
+      ],
+      "applicable_limits": [],
+      "missing_evidence": [],
+      "citations": [
+        {
+          "source": "policy",
+          "page": 9,
+          "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+          "chunk_id": "policy_p9_c2"
+        }
+      ],
+      "reason": "The claimed treatment is cosmetic aesthetic surgery, which is explicitly excluded under the policy exclusions unless it relates to the treatment of an Injury or Disease. Since medical necessity is not confirmed and the procedure falls under the exclusion for cosmetic treatments, the claim is not admissible."
+    },
+    "validation": {
+      "validation_status": "PASS",
+      "supported_claims": [
+        "The treatment received by the insured is cosmetic aesthetic surgery."
+      ],
+      "unsupported_claims": [],
+      "citation_checks": [
+        {
+          "statement": "Cosmetic or aesthetic treatment of any description and plastic surgery are excluded from coverage unless they relate to the treatment of Injury or Disease.",
+          "citation": {
+            "source": "policy",
+            "page": 9,
+            "section": "UNIVERSAL SOMPO GENERAL INSURANCE CO LTD",
+            "chunk_id": "policy_p9_c2"
+          },
+          "status": "VALID",
+          "notes": "The citation correctly points to policy section item 5 on page 9, which explicitly excludes cosmetic or aesthetic treatment unless related to the treatment of Injury or Disease."
+        }
+      ],
+      "calculation_checks": [],
+      "notes": "The Decision Agent correctly identified the claim fact, applied the appropriate policy exclusion for cosmetic treatments based on valid retrieved policy evidence, and properly concluded that the claim is not admissible."
+    },
+    "trace": [
+      {
+        "agent": "Case Analysis Agent",
+        "action": "Analyzed claim facts and identified decision dimensions and missing evidence."
+      },
+      {
+        "agent": "Policy Evidence Agent",
+        "action": "Retrieved policy evidence using multiple targeted hybrid retrieval queries followed by cross-encoder reranking.",
+        "query_count": 7,
+        "evidence_count": 10
+      },
+      {
+        "agent": "Coverage & Exclusion Agent",
+        "action": "Analyzed retrieved policy evidence for coverage, waiting periods, exclusions, definitions, and limits."
+      },
+      {
+        "agent": "Decision Agent",
+        "action": "Generated a policy-grounded decision with claim/policy provenance."
+      },
+      {
+        "agent": "Validation Agent",
+        "action": "Validated claim facts, policy rules, citations, and calculations.",
+        "validation_status": "PASS"
+      }
+    ]
+  }
+]
