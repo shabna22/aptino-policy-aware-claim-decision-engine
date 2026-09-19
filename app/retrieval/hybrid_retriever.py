@@ -1,9 +1,25 @@
 import json
+import os
 from pathlib import Path
 
 from rank_bm25 import BM25Okapi
-from sentence_transformers import SentenceTransformer
+from google import genai
 import numpy as np
+from dotenv import load_dotenv
+
+
+# ---------------------------------------------------------
+# Environment
+# ---------------------------------------------------------
+
+load_dotenv()
+
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
+if not GEMINI_API_KEY:
+    raise RuntimeError("GEMINI_API_KEY is not set.")
+
+client = genai.Client(api_key=GEMINI_API_KEY)
 
 
 # ---------------------------------------------------------
@@ -11,7 +27,6 @@ import numpy as np
 # ---------------------------------------------------------
 
 CHUNKS_PATH = Path("app/ingestion/policy_chunks.json")
-
 
 with open(CHUNKS_PATH, "r", encoding="utf-8") as file:
     chunks = json.load(file)
@@ -32,28 +47,47 @@ bm25 = BM25Okapi(tokenized_documents)
 
 
 # ---------------------------------------------------------
-# Dense Retriever
+# Gemini Dense Embeddings
 # ---------------------------------------------------------
 
-embedding_model = None
 document_embeddings = None
 
 
-def load_dense_model():
-    global embedding_model, document_embeddings
+def get_embeddings(texts):
+    """Generate Gemini embeddings for a list of texts."""
 
-    if embedding_model is None:
-        print("Loading dense embedding model...")
-        embedding_model = SentenceTransformer(
-            "sentence-transformers/all-MiniLM-L6-v2"
+    response = client.models.embed_content(
+        model="gemini-embedding-001",
+        contents=texts,
+    )
+
+    return np.array(
+        [embedding.values for embedding in response.embeddings],
+        dtype=np.float32
+    )
+
+
+def load_dense_embeddings():
+    global document_embeddings
+
+    if document_embeddings is None:
+        print("Generating policy embeddings with Gemini...")
+
+        document_embeddings = get_embeddings(documents)
+
+        # Normalize for cosine similarity
+        norms = np.linalg.norm(
+            document_embeddings,
+            axis=1,
+            keepdims=True
         )
 
-        document_embeddings = embedding_model.encode(
-            documents,
-            normalize_embeddings=True
+        document_embeddings = document_embeddings / np.maximum(
+            norms,
+            1e-12
         )
 
-        print("Dense embedding model loaded.")
+        print("Policy embeddings generated.")
 
 
 # ---------------------------------------------------------
@@ -91,12 +125,16 @@ def bm25_search(query, top_k=5):
 # ---------------------------------------------------------
 
 def dense_search(query, top_k=5):
-    load_dense_model()
 
-    query_embedding = embedding_model.encode(
-        [query],
-        normalize_embeddings=True
-    )[0]
+    load_dense_embeddings()
+
+    query_embedding = get_embeddings([query])[0]
+
+    # Normalize query embedding
+    query_embedding = query_embedding / max(
+        np.linalg.norm(query_embedding),
+        1e-12
+    )
 
     scores = np.dot(
         document_embeddings,
@@ -124,7 +162,7 @@ def dense_search(query, top_k=5):
 
 
 # ---------------------------------------------------------
-# Simple Hybrid Fusion
+# Hybrid Fusion
 # ---------------------------------------------------------
 
 def hybrid_search(query, top_k=5):
