@@ -35,14 +35,25 @@ bm25 = BM25Okapi(tokenized_documents)
 # Dense Retriever
 # ---------------------------------------------------------
 
-embedding_model = SentenceTransformer(
-    "sentence-transformers/all-MiniLM-L6-v2"
-)
+embedding_model = None
+document_embeddings = None
 
-document_embeddings = embedding_model.encode(
-    documents,
-    normalize_embeddings=True
-)
+
+def load_dense_model():
+    global embedding_model, document_embeddings
+
+    if embedding_model is None:
+        print("Loading dense embedding model...")
+        embedding_model = SentenceTransformer(
+            "sentence-transformers/all-MiniLM-L6-v2"
+        )
+
+        document_embeddings = embedding_model.encode(
+            documents,
+            normalize_embeddings=True
+        )
+
+        print("Dense embedding model loaded.")
 
 
 # ---------------------------------------------------------
@@ -80,6 +91,7 @@ def bm25_search(query, top_k=5):
 # ---------------------------------------------------------
 
 def dense_search(query, top_k=5):
+    load_dense_model()
 
     query_embedding = embedding_model.encode(
         [query],
