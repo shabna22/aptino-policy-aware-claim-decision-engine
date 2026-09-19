@@ -1,14 +1,13 @@
 import json
 import requests
 import streamlit as st
-
+import os
 
 # ---------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------
 
-API_URL = "http://127.0.0.1:8000/analyze"
-
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8000/analyze")
 st.set_page_config(
     page_title="Policy-Aware Claim Decision Engine",
     page_icon="🏥",
