@@ -2,12 +2,23 @@ from sentence_transformers import CrossEncoder
 
 
 # Load reranking model
-reranker_model = CrossEncoder(
-    "cross-encoder/ms-marco-MiniLM-L-6-v2"
-)
+reranker_model = None
+
+
+def load_reranker_model():
+    global reranker_model
+
+    if reranker_model is None:
+        print("Loading reranker model...")
+        reranker_model = CrossEncoder(
+            "cross-encoder/ms-marco-MiniLM-L-6-v2"
+        )
+        print("Reranker model loaded.")
 
 
 def rerank_results(query, results, top_k=5):
+    load_reranker_model()
+    
     """
     Rerank hybrid retrieval results using a cross-encoder.
     """
